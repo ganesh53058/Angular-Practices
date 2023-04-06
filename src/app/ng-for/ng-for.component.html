@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <div class="container mt-5">
+                <div class="table-container">
+                     <table class="table table-striped shadow border">
+                          <thead>
+                               <tr>
+                                    <th>Name</th>
+                                    <th>Designation</th>
+                               </tr>
+                          </thead>
+                          <tbody>
+                               <tr *ngFor="let abc of employees">
+                                    <td>{{abc.name}}</td>
+                                    <td>{{abc.designation}}</td>
+                               </tr>
+                          </tbody>
+                     </table>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>

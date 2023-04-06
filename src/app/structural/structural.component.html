@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>IF Condition</h1>
+            <h5 *ngIf=" status; then trueB else falseB"></h5>
+            <ng-template #falseB>
+                <h5>This is False Block</h5>
+            </ng-template>
+            <ng-template #trueB>
+                <h5>This is True Block</h5>
+            </ng-template>
+        </div>
+    </div>
+    <div class="row " style="margin-top:50px">
+        <div class=" col-md-12">
+            <h1>For Loop</h1>
+            <h5 *ngFor="let x of Colors">{{x}}</h5>
+        </div>
+    </div>
+    <div class="row " style="margin-top:50px">
+        <div class=" col-md-12">
+            <input type="text"  placeholder="Enter...." [(ngModel)]="name">
+
+           <div [ngSwitch]="myChoice">
+            <div class="SwitchCase">
+                <div *ngSwitchCase="'one'">First Block</div>
+                <div *ngSwitchCase="'two'">Second Block</div>
+                <div *ngSwitchCase="'three'">Third Block</div>
+                <div *ngSwitchCase="'four'">Fourth Block</div>
+                <div *ngSwitchCase="'five'">Fifth Block</div>
+            </div>
+           </div>
+           <button (click)="button()">Click</button>
+        </div>
+    </div>
+</div>

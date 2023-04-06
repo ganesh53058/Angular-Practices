@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <div class="container mt-5">
+                <div class="voter-container">
+                     <table class="table table-striped border shadow">
+                          <thead>
+                               <tr>
+                                    <th>Name</th>
+                                    <th>Location</th>
+                                    <th>Age</th>
+                                    <th>Eligibility</th>
+                               </tr>
+                          </thead>
+                          <tbody>
+                               <tr *ngFor="let voter of voters" [ngStyle]="{backgroundColor: (voter.age>=18) ? '#D5F5E3' : '#FADBDB'}">
+                                    <td>{{voter.name}}</td>
+                                    <td>{{voter.area}}</td>
+                                    <td >{{voter.age}}</td>
+                                    <td *ngIf="voter.age>=18; else noteligible" [ngStyle]="{color: (voter.age>=18) ? 'Green' : 'Red'}">Eligible</td>
+                                    <ng-template #noteligible>
+                                         <td [ngStyle]="{color: (voter.age>=18) ? 'Green' : 'Red'}">Not Eligible</td>
+                                    </ng-template>
+                               </tr>
+                          </tbody>
+                     </table>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>
